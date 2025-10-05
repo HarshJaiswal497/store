@@ -10,11 +10,8 @@ public class StoreApplication {
 	public static void main(String[] args) {
 		// Start Spring Boot application and get ApplicationContext
 		ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
-
-		// Get the NotificationManager bean from the context
-		NotificationManager notificationManager = context.getBean(NotificationManager.class);
-
-		// Call the sendNotification method
-		notificationManager.sendNotification("Hello from Spring Boot!");
+		UserService userService = context.getBean(UserService.class);
+		userService.registerUser(new User(1L, "Harsh", "harshjaiswal497@gmail.com", "123abc"));
+//		userService.registerUser(new User(1L, "Harsh", "harshjaiswal497@gmail.com", "123abc"));
 	}
 }

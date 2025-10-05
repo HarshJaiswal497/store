@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: store
+mail:
+  host: https:\\smtp.com
+  port: 24
